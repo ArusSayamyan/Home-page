@@ -1,0 +1,114 @@
+@use "src/sass/abstracts/animations";
+@use "src/sass/abstracts/mixins";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ecf7f3;
+}
+
+.container {
+  padding: 15px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .content {
+    content: "";
+    display: table;
+    clear: both;
+    @media only screen and (max-width: 700px) {
+      margin-top: 160px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 15px;
+    
+      .title {
+        width: 400px;
+        height: 200px;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: capitalize;
+        span {
+          color: #ff8345;
+        }
+      }
+      .inputContainer {
+        width: 400px;
+        height: 50px;
+        margin-top: 25px;
+        position: relative;
+
+        .input {
+          width: 100%;
+          height: 50px;
+          border-radius: 25px;
+          box-sizing: border-box;
+          padding: 10px;
+          border: none;
+          outline: none;
+        }
+        .search {
+          position: absolute;
+          right: 5px;
+          bottom: 5px;
+          background-color: #48b774;
+          padding: 20px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          .searchSvg {
+            position: absolute;
+            bottom: 11px;
+            right: 10px;
+          }
+
+          .lineSVG {
+            position: absolute;
+            bottom: 8px;
+            right: 6px;
+          }
+        }
+      }
+
+      .userImgs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 25px;
+
+        .user1 {
+          position: relative;
+          z-index: 3;
+        }
+        .user2 {
+          position: absolute;
+          left: 120px;
+          z-index: 2;
+        }
+        .user3 {
+          position: absolute;
+          left: 140px;
+          z-index: 1;
+        }
+        .user4 {
+          position: absolute;
+          left: 160px;
+        }
+        p {
+          font-size: 14px;
+          position: absolute;
+          left: 200px;
+          span {
+            color: #ff8345;
+          }
+        }
+      }
+    }
+  }
+}

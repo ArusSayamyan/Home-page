@@ -1,0 +1,84 @@
+@use "src/sass/abstracts/animations";
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  position: relative;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+  }
+
+  .cyrcle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: #48b774;
+    position: relative;
+    top: 60px;
+    left: 200px;
+    animation: pulsing 3s infinite;
+  }
+
+  .girlImg {
+    position: absolute;
+    left: -80px;
+    top: 100px;
+  }
+
+  .counterrotate {
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.131);
+    border-radius: 50%;
+    position: absolute;
+    left: 150px;
+    animation: rotate 6s linear infinite;
+
+    .item {
+      position: absolute;
+      left: -40px;
+      bottom: 50px;
+      overflow: hidden;
+      margin: auto;
+      animation: pulsing 3s infinite;
+    }
+    .item1 {
+      position: absolute;
+      left: -70px;
+      top: 100px;
+      overflow: hidden;
+      margin: auto;
+      animation: pulsing 3s infinite;
+    }
+    .item2 {
+      position: absolute;
+      right: 140px;
+      top: -50px;
+      overflow: hidden;
+      margin: auto;
+      animation: pulsing 3s infinite;
+    }
+    .item3 {
+      position: absolute;
+      right: -50px;
+      top: 120px;
+      overflow: hidden;
+      margin: auto;
+      animation: pulsing 3s infinite;
+    }
+    .item4 {
+      position: absolute;
+      right: -60px;
+      bottom: 50px;
+      overflow: hidden;
+      margin: auto;
+      animation: pulsing 3s infinite;
+      .pulsingImg {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
